@@ -1,0 +1,25 @@
+package inheritence.package2;
+
+import inheritence.package1.C1;
+
+public class C4 extends C1 {
+
+	public static void main(String[] args) {
+		C1 c1 = new C1();
+		int a = c1.w;
+		
+		// While protected members can be accessed anywhere in the same package and outside package
+		// only in its child class and using the child class's reference variable only, not on the 
+		// reference variable of the parent class
+	    // int b = c1.x;
+		
+		// Cannot access default in different package
+		//int c = c1.y;
+	
+		// Can not access a  Private access
+		//int d = c1.z;
+		
+		// Cannot access protected method in different package
+		//c1.m();
+	}
+}

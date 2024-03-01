@@ -1,0 +1,17 @@
+package lesson5Assignment.prob2;
+
+import java.time.LocalDate;
+
+public class Professor extends DeptEmployee {
+	
+	int numberOfPublications;
+
+	public Professor(String name, double salary, LocalDate hireDate) {
+		super(name, salary, hireDate);
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	
+}

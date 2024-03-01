@@ -1,0 +1,11 @@
+package lesson5Assignment.prob1;
+
+public class Rectangle extends Shape {
+
+	int lenght;
+	int width;
+	
+	public Rectangle(String color, int length, int width) {
+		super(color);
+	}
+}

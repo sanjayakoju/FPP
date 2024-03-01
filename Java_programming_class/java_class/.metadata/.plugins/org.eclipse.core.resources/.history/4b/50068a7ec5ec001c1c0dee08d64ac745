@@ -1,0 +1,20 @@
+package finalterm.arraylist;
+
+interface Queue1 {
+	
+	void enqueue(int n);
+	
+	int deQueue();
+	
+	void resize();
+	
+	boolean isFull();
+	
+	boolean isEmpty();
+	
+	public int size();
+}
+
+public class QueueArrayList {
+
+}

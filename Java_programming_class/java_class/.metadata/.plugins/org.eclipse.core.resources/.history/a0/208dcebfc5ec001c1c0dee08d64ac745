@@ -1,0 +1,75 @@
+package finalterm.arraylist;
+
+interface Queue1 {
+	
+	void enqueue(int n);
+	
+	int deQueue();
+	
+	void resize();
+	
+	boolean isFull();
+	
+	boolean isEmpty();
+	
+	public int size();
+}
+
+public class QueueArrayList implements Queue1 {
+
+	int arr[];
+	int front;
+	int rear;
+	
+	public QueueArrayList(int size) {
+		this.arr = new int[size];
+		this.front = -1;
+		this.rear = 0;
+	}
+
+	@Override
+	public void enqueue(int n) {
+		// TODO Auto-generated method stub
+		if(front == -1) {
+			front++;
+		}
+		if (isFull()) {
+			resize();
+		}
+		arr[rear] = n;
+		rear++;
+	}
+
+	@Override
+	public int deQueue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void resize() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isFull() {
+		// TODO Auto-generated method stub
+		if (rear == arr.length -1) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}

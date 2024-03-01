@@ -1,0 +1,52 @@
+package assignment12;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Prob1 {
+
+	void getInput() {
+	
+		Scanner scanner = new Scanner(System.in);
+		try {
+			System.out.println("Enter Integer Value: ");
+			Integer inputInt = scanner.nextInt(); // input : "12222222222222222"
+			System.out.println(inputInt);
+
+		} catch (InputMismatchException ex) {
+			System.out.println("input is not with in integer range " + ex);
+		}
+	}
+
+//		
+//		System.out.println("Enter a number");
+//		try {
+//			Integer n = scan.nextInt();
+//			
+//		} catch (InputMismatchException e) {
+//			// TODO: handle exception
+//			System.out.println(e.getMessage());
+//		}
+
+//		catch (NumberFormatException e) {
+//			// TODO: handle exception
+//			System.out.println(e.getMessage());
+//		}
+//		
+//		if (n < 0 || n > 100) {
+//			throw new UnsupportedOperationException("not in the range of 0-100");
+//		}
+//		
+
+
+	public static void main(String[] args) {
+		Prob1 ob = new Prob1();
+		try {
+			ob.getInput();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+
+	}
+}

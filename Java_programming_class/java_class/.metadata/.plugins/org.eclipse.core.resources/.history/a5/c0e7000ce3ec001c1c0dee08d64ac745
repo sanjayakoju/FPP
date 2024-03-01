@@ -1,0 +1,23 @@
+package finalterm.linkedList;
+
+public class QueueDLinkedList {
+	
+	Node front, rear;
+	int count;
+	
+	class Node {
+		Node prev;
+		int value;
+		Node next;
+		public Node(Node prev, int value, Node next) {
+			this.prev = prev;
+			this.value = value;
+			this.next = next;
+		}
+	}
+	
+	public QueueDLinkedList() {
+		this.count = 0;
+	}
+
+}

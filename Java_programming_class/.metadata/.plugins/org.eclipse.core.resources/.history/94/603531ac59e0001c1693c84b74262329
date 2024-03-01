@@ -1,0 +1,39 @@
+package lesson5Assignment.prob2;
+
+import java.time.LocalDate;
+import java.util.Scanner;
+
+public class TestMain {
+	public static void main(String[] args) {
+		DeptEmployee department[] = new DeptEmployee[5];
+		department[0] = new Professor("Sunit",8200, LocalDate.parse("2016-12-06"), 10);
+		department[1] = new Professor("Prince Hamal",12200, LocalDate.parse("2014-12-06"), 10);
+		department[2] = new Professor("Sabin",6000, LocalDate.parse("2019-12-06"), 10);
+		department[3] = new Secretary("Sachita", 7500, LocalDate.parse("2018-04-12"), 10);
+		department[4] = new Secretary("Rajesh", 85000, LocalDate.parse("2016-09-12"), 12);
+		for (DeptEmployee deptEmp : department) {
+			System.out.println(deptEmp.getClass().getSimpleName() + " Name : "+ deptEmp.getName());
+		}
+		System.out.println("Are you want to see the sum of all Professor and Secretary salary in the department? Then Type Y.");
+		Scanner scanner = new Scanner(System.in);
+		String response = scanner.next().toUpperCase();
+		switch (response) {
+		case "Y": {
+			populate(department);
+			break;
+		}
+		default:
+			System.out.println("Invalid response");
+			break;
+		}
+		
+	}
+	
+	static void populate(DeptEmployee deptEmployee[]) {
+		double totalSalary;
+		for (DeptEmployee deptEmp : deptEmployee) {
+			System.out.println(deptEmp.getClass().getSimpleName() + " Name : "+ deptEmp.getName() + " Salary : " + deptEmp.computeSalary());
+			totalSalary += deptEmp.computeSalary();
+		}
+	}
+}

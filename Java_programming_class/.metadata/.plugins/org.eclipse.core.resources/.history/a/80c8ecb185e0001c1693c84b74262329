@@ -1,0 +1,10 @@
+package lesson5Assignment.prob4;
+
+public class DriverClass {
+	
+	public static void main(String[] args) {
+		BasePlusCommissionEmployee bpc = new BasePlusCommissionEmployee(1000, 10);
+		CommisionEmployee ce = new CommisionEmployee(1000, 10);
+	}
+
+}

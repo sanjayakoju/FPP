@@ -1,0 +1,23 @@
+package assignment3;
+
+import java.util.Scanner;
+
+public class Prog2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a String");
+		String st = scanner.next();
+		minCharacter(st);
+	}
+	
+	public static void minCharacter(String st) {
+		if(st.equals(null) || st.equals("")) {
+			System.out.println("Stop");
+		} else {
+			char ch = st.charAt(0);
+			ch =  st.charAt(1) < ch ? ch : st.charAt(1);
+			minCharacter(st.substring(1, st.length()-1));
+			System.out.println(ch);
+		}
+	}
+}

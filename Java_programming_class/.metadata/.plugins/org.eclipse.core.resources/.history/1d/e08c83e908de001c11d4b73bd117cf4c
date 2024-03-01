@@ -1,0 +1,29 @@
+package assignment3.recursion;
+
+import java.util.Scanner;
+
+public class LinearSearch {
+
+	public static void main(String[] args) {
+		int arr[] = {1,44,33,22,55,77,12,14};
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a number to search");
+		int input = scanner.nextInt();
+	}
+	
+	public static int search(int arr[], int input) {
+		linearSearch(arr, input, 0)
+	}
+	
+	public static int linearSearch(int arr[], int input, int pos) {
+		if(arr.length == 0) {
+			return -1;
+		} else {
+			if (arr[pos] == input) {
+				return pos;
+			} else {
+				return linearSearch(arr, input, pos++);
+			}
+		}
+	}
+}

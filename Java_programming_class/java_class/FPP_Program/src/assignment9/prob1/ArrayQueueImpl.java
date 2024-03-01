@@ -1,0 +1,68 @@
+package assignment9.prob1;
+
+import java.util.Arrays;
+
+public class ArrayQueueImpl {
+	private int queue[];
+	private int front, rear, capacity;
+
+	public ArrayQueueImpl(int c) {
+		// TODO Auto-generated constructor stub
+		front = rear = 0;
+		capacity = c;
+		queue = new int[capacity];
+	}
+
+	public int peek() {
+		// implement
+		if (rear == front) {
+			return 0;
+		}
+		System.out.println(Arrays.toString(queue));
+		return queue[front];
+	}
+
+	public void enqueue(int data) {
+		// implement
+		if (capacity == rear) {
+			System.out.printf("\nQueue is full\n");
+			resize();
+		}
+		queue[rear] = data;
+		rear++;
+
+	}
+
+	public int dequeue() {
+		// implement
+		int rtn = -1;
+		if (front == rear) {
+			System.out.printf("\nQueue is empty\n");
+			return rtn;
+		} else {
+			rtn = queue[front];
+			front++;
+			return rtn;
+		}
+	}
+
+	public boolean isEmpty() {
+		// implement
+		if (rear == 0) {
+			return true;
+		}
+		return false;
+	}
+
+	public int size() {
+		// implement
+		return capacity;
+	}
+
+	private void resize() {
+		// implement
+		int[] temp = new int[queue.length * 2];
+		System.arraycopy(queue, 0, temp, 0, queue.length);
+		queue = temp;
+	}
+}

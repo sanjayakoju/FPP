@@ -1,0 +1,5 @@
+package inheritence.package1;
+
+public class C3 extends C1 {
+
+}

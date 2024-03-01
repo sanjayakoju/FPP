@@ -1,0 +1,112 @@
+package assignment9.prob2;
+
+import stack.Node;
+
+//User Implementation of Stack 
+interface Stack1 {
+	public void push(int data);
+
+	public Object pop();
+
+	public Object peek();
+
+	public boolean isEmpty();
+
+	public int size();
+}
+
+
+public class LinkedListStack implements Stack1 {
+	 private Node top;
+	 private int nodesCount;
+	
+	public LinkedListStack() {
+		 this.top = null;
+	     this.nodesCount = 0;
+	}
+	
+	class Node {
+		int data;
+		Node link;
+	}
+
+	@Override
+	public void push(int data) {
+		// TODO Auto-generated method stub
+		Node temp = new Node();
+		System.out.println("Data : "+data);
+//		 if (temp == null) {
+//			 System.out.println("Heap Overflow");
+//			 return;
+//		 }
+		 temp.data = data;
+		 temp.link = top;
+		 System.out.println("Push : "+temp.data);
+		 System.out.println("Push Link : "+temp.link);
+		 
+		 
+		// allocate a new node in a heap
+	     Node node = new Node();
+
+	     // check if stack (heap) is full. Then inserting an element would
+	     // lead to stack overflow
+	     if (node == null)
+	     {
+	         System.out.println("Heap Overflow");
+	         return;
+	     }
+
+	     System.out.println("Inserting " + x);
+
+	     // set data in the allocated node
+	     node.data = x;
+
+	     // set the .next pointer of the new node to point to the current
+	     // top node of the list
+	     node.next = top;
+
+	     // update top pointer
+	     top = node;
+
+	     // increase stack's size by 1
+	     this.nodesCount += 1;
+	}
+
+	@Override
+	public Object pop() {
+		// TODO Auto-generated method stub
+		if (top == null) {
+			System.out.println("Stack Underflow");
+			return -1;
+		} else {
+			return top = top.link;
+		}
+	}
+
+	@Override
+	public Object peek() {
+		// TODO Auto-generated method stub
+		System.out.println("Peek "+top);
+		if (!isEmpty()) {
+			return top.data;
+		} else {
+			return -1;
+		}	
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		if (top == null) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,16 @@
+package lesson5Assignment.prob4;
+
+public class BasePlusCommissionEmployee extends CommisionEmployee {
+
+	double baseSalary;
+	
+	public BasePlusCommissionEmployee(double grossSales, double commissionRate) {
+		super(grossSales, commissionRate);
+	}
+	
+	@Override
+	public double getPayment() {
+		return baseSalary + getGrossSales() * getCommissionRate();
+	}
+
+}

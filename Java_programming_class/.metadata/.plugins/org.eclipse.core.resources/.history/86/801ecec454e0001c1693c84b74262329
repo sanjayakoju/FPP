@@ -1,0 +1,8 @@
+package lesson5Assignment.prob2;
+
+public class Secretary extends DeptEmployee {
+
+	double overtimeHours;
+	
+	
+}

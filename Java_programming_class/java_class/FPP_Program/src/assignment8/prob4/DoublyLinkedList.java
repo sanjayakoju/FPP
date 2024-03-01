@@ -1,0 +1,93 @@
+package assignment8.prob4;
+
+
+
+public class DoublyLinkedList {
+	
+		Node header;
+		DoublyLinkedList(){
+			header = new Node();
+		}
+		
+		//adds to the end of the list
+		public void addLast(String item){
+			//implement
+			Node n = new Node(header, item, header.next);
+			if (header.next == null) {
+				header.next = n;
+				n.previous = header;
+			} 
+			else {
+				for(Node s = header.next; s!=null; s=s.next ) {
+					if(s.next == null) {
+						n.next = s.next;
+						s.next = n;
+						break;
+					}
+				}
+			}
+			
+		}
+		public boolean remove(String item){
+			//Implement
+			if (item == null || item.equals("")) {
+				return false;
+			} else {
+				for(Node s = header.next; s!=null; s=s.next) {
+					if(s.value.equals(item)) {
+						// Delete note and connect previous node with next node
+						if (s.value != null) {
+							s.previous.next = s.next;
+							s.next.previous = s.previous;
+						}
+//						s.previous.next = null;
+ 						return true;
+					}
+				}
+			}
+			return false;
+		}
+		@Override
+		public String toString() {
+			
+			StringBuilder sb = new StringBuilder();
+			toString(sb, header);
+			return sb.toString();
+			
+		}
+		private void toString(StringBuilder sb, Node n) {
+			if(n==null) return;
+			if(n.value != null) sb.append(" " + n.value);
+			toString(sb, n.next);
+		}
+		
+		class Node {
+			String value;
+			Node next;
+			Node previous;
+			
+			Node() {
+				
+			}
+			
+			Node(Node previous, String value, Node next){
+				this.previous = previous;
+				this.value = value;
+				this.next = next;
+			}
+			
+			public String toString() {
+				return value == null ? "null" : value;
+			}
+		}
+	
+		public static void main(String[] args){
+			DoublyLinkedList list = new DoublyLinkedList();
+			list.addLast("Bob");
+			list.addLast("Harry");
+			list.addLast("Steve");
+			System.out.println("Added List "+list);
+			System.out.println("Remove "+list.remove("Bob"));
+			System.out.println("Added List "+list);
+		}
+}

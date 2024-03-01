@@ -1,0 +1,20 @@
+package inheritence.package2;
+
+import inheritence.package1.C1;
+
+public class C4 extends C1 {
+
+	public static void main(String[] args) {
+		C1 c1 = new C1();
+		int a = c1.w;
+		// Can not access because protected in different package
+		//int b = c1.x;
+		// Cannot access private 
+		//int c = c1.y;
+		
+		// Can not access a because of Private access
+		//int d = c1.z;
+		
+		c1.m();
+	}
+}

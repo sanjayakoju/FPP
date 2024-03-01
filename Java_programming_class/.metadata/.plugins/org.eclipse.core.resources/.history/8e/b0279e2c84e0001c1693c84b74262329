@@ -1,0 +1,14 @@
+package lesson5Assignment.prob4;
+
+public class CommisionEmployee extends Employee {
+	
+	private double grossSales;
+	private double commissionRate;
+	
+
+	@Override
+	public double getPayment() {
+		return grossSales * commissionRate;
+	}
+
+}

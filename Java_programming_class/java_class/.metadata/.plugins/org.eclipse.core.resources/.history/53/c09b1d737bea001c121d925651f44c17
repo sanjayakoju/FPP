@@ -1,0 +1,33 @@
+package assignment12;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Prob1 {
+	
+	void getInput() {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n = 0;
+		if (n < 0 && n > 100) {
+			throw new UnsupportedOperationException();
+		}
+		try {
+			n = scan.nextInt();
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		} catch (InputMismatchException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println(n);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+	}
+}

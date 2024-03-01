@@ -1,0 +1,12 @@
+package lesson5Assignment.prob2;
+
+import java.time.LocalDate;
+
+public class DeptEmployee {
+
+	String name;
+	double salary;
+	LocalDate hireDate;
+	
+	
+}

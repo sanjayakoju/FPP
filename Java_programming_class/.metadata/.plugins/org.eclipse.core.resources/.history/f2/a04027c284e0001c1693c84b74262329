@@ -1,0 +1,12 @@
+package lesson5Assignment.prob4;
+
+public class SalariedEmployee extends Employee {
+
+	private double weeklySalary;
+	
+	@Override
+	public double getPayment() {
+		return weeklySalary;
+	}
+
+}

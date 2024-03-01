@@ -1,0 +1,68 @@
+package finalterm.linkedList;
+
+interface Stack1 {
+	public void push(int data);
+
+	public int pop();
+
+	public int peek();
+
+	public boolean isEmpty();
+
+	public int size();
+}
+
+
+public class StackLinkedList implements Stack1 {
+	
+	Node top;
+	int countNode;
+	
+	public StackLinkedList() {
+		// TODO Auto-generated constructor stub
+		top = null;
+		countNode = 0;
+	}
+	
+	
+	class Node {
+		Node next;
+		Node prev;
+		int value;
+	}
+
+	@Override
+	public void push(int data) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int peek() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return countNode;
+	}
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

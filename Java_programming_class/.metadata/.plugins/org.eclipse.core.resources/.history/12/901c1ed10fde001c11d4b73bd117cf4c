@@ -1,0 +1,18 @@
+package assignment3.recursion;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
+class JUnitTest {
+
+	
+	@Test
+	void test1() {
+		RecursionProg1 recursionProg1 = new RecursionProg1();
+		recursionProg1.power(4, 4);
+		assertEquals(14.0, 16.0);
+	}
+
+}

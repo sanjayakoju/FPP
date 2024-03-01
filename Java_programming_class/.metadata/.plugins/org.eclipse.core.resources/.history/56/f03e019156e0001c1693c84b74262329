@@ -1,0 +1,10 @@
+package lesson5Assignment.prob2;
+
+import java.time.LocalDate;
+
+public class TestMain {
+	public static void main(String[] args) {
+		DeptEmployee department[] = new DeptEmployee[5];
+		department[0] = new Professor("Sunit",8200, LocalDate.parse("2018-12-06"), 10);
+	}
+}

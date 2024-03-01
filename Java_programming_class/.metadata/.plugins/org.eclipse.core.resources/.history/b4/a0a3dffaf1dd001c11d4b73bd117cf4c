@@ -1,0 +1,18 @@
+package assignment3;
+
+import java.util.Scanner;
+
+public class Prog1 {
+
+	public static void main(String[] args) {
+		System.out.println(double(3,3));
+	}
+	
+	public static double power(double x, int n) {
+		if (n<0) {
+			return 0;
+		} else {
+			return x = x * power(x, n-1);
+		}
+	}
+}

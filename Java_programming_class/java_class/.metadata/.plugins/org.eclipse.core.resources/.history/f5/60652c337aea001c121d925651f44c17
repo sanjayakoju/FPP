@@ -1,0 +1,21 @@
+package assignment12;
+
+import java.util.Scanner;
+
+public class Prob1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number");
+		int n;
+		try {
+			n = scan.nextInt();
+		} catch (NumberFormatException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println(n);
+		
+	}
+}

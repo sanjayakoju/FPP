@@ -1,0 +1,15 @@
+package assignment3;
+
+import java.util.Scanner;
+
+public class Prog2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a String");
+		String st = scanner.next();
+	}
+	
+	public static char minCharacter(String st) {
+		
+	}
+}

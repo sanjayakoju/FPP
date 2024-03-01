@@ -1,0 +1,9 @@
+package assignment6;
+
+public class TestMain {
+
+	public static void main(String[] args) {
+		// Task A
+		DeptEmployee deptEmployee[] = getDeptData();
+	}
+}

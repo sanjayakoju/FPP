@@ -1,0 +1,9 @@
+package lesson5Assignment.prob4;
+
+public class BasePlusCommissionEmployee extends CommisionEmployee {
+
+	public BasePlusCommissionEmployee(double grossSales, double commissionRate) {
+		super(grossSales, commissionRate);
+	}
+
+}

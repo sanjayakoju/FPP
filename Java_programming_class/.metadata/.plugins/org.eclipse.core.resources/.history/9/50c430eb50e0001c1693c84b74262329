@@ -1,0 +1,12 @@
+package lesson5Assignment.prob1;
+
+public class Square extends Rectangle {
+
+	public Square(String color, int length, int width) {
+		super(color, length, width);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

@@ -1,0 +1,106 @@
+package finalterm.linkedList;
+
+interface Stack1 {
+	public void push(int data);
+
+	public int pop();
+
+	public int peek();
+
+	public boolean isEmpty();
+
+	public int size();
+}
+
+
+public class StackLinkedList implements Stack1 {
+	
+	Node top;
+	int size;
+	
+	public StackLinkedList() {
+		// TODO Auto-generated constructor stub
+		this.top = null;
+		this.size = 0;
+	}
+	
+	
+	class Node {
+		Node prev;
+		int value;
+		Node next;
+		
+		
+		public Node(Node prev,  int value , Node next) {
+			super();
+			this.next = next;
+			this.prev = prev;
+			this.value = value;
+		}
+		
+		
+	}
+
+	@Override
+	public void push(int data) {
+		// TODO Auto-generated method stub
+		if(top == null) {
+			top = new Node(null, data, null);
+		} else {
+			Node n = new Node(null, data, top);
+			top.prev = n;
+			top = n;
+			size++;
+		}
+		
+	}
+
+	@Override
+	public int pop() {
+		// TODO Auto-generated method stub
+		if (top == null) {
+			System.out.println("Stack is empty");
+			return -1;
+		}
+		Node temp = null;
+		if(top != null) {
+			temp = top;
+			top.next.prev = null;
+			top = top.next;
+			size--;
+		}
+		return temp.value;
+	}
+
+	@Override
+	public int peek() {
+		// TODO Auto-generated method stub
+		return top.value;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		if (top==null) {
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return size;
+	}
+	
+	public static void main(String[] args) {
+		StackLinkedList ob = new StackLinkedList();
+		System.out.println("Is Empty : "+ob.isEmpty());
+		ob.push(10);
+		ob.push(20);
+		System.out.println("Peek : "+ob.peek());
+		System.out.println("Pop : "+ob.pop());
+		System.out.println("Peek : "+ob.peek());
+	}
+
+}

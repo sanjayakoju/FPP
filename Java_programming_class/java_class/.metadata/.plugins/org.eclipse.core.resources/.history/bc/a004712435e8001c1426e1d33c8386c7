@@ -1,0 +1,19 @@
+package assignment9.prob1;
+
+public class MainTest {
+
+	public static void main(String[] args) {
+		ArrayQueueImpl ob = new ArrayQueueImpl(5);
+		ob.enqueue(10);
+		ob.enqueue(20);
+//		ob.enqueue(30);
+		System.out.println("Dequeue : "+ob.dequeue());
+//		System.out.println("Dequeue : "+ob.dequeue());
+		System.out.println("Size : "+ob.size());
+		System.out.println("Is Empty : "+ob.isEmpty());
+		System.out.println("Peek : "+ob.peek());
+//		System.out.println("Dequeue : "+ob.dequeue());
+		ob.enqueue(40);
+		System.out.println("Peek : "+ob.peek());
+	}
+}

@@ -1,0 +1,81 @@
+package assignment9.prob2;
+
+
+//User Implementation of Stack 
+interface Stack1 {
+	public void push(int data);
+
+	public Object pop();
+
+	public Object peek();
+
+	public boolean isEmpty();
+
+	public int size();
+}
+
+
+public class LinkedListStack implements Stack1 {
+	Node top;
+	
+	public LinkedListStack() {
+		this.top = null;
+	}
+	
+	class Node {
+		int data;
+		Node link;
+	}
+
+	@Override
+	public void push(int data) {
+		// TODO Auto-generated method stub
+		Node temp = new Node();
+		System.out.println("Data : "+data);
+//		 if (temp == null) {
+//			 System.out.println("Heap Overflow");
+//			 return;
+//		 }
+		 temp.data = data;
+		 temp.link = top;
+		 System.out.println("Push : "+temp.data);
+	}
+
+	@Override
+	public Object pop() {
+		// TODO Auto-generated method stub
+		if (top == null) {
+			System.out.println("Stack Underflow");
+			return -1;
+		} else {
+			return top = top.link;
+		}
+	}
+
+	@Override
+	public Object peek() {
+		// TODO Auto-generated method stub
+		System.out.println("Peek "+top);
+		if (!isEmpty()) {
+			return top.data;
+		} else {
+			return -1;
+		}	
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		if (top == null) {
+			return true;
+		}
+		return false;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

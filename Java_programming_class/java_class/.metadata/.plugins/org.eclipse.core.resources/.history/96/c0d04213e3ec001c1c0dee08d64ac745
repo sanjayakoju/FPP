@@ -1,0 +1,38 @@
+package finalterm.linkedList;
+
+interface Queue1 {
+	
+	void enqueue(int n);
+	
+	int deQueue();
+	
+	void resize();
+	
+	boolean isFull();
+	
+	boolean isEmpty();
+	
+	public int size();
+}
+
+public class QueueDLinkedList  {
+	
+	Node front, rear;
+	int count;
+	
+	class Node {
+		Node prev;
+		int value;
+		Node next;
+		public Node(Node prev, int value, Node next) {
+			this.prev = prev;
+			this.value = value;
+			this.next = next;
+		}
+	}
+	
+	public QueueDLinkedList() {
+		this.count = 0;
+	}
+
+}

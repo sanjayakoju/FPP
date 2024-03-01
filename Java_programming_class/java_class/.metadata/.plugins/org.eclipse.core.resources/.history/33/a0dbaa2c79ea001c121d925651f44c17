@@ -1,0 +1,76 @@
+package assignment12;
+
+interface Operation {
+
+	public boolean deposit(double amount);
+
+	public boolean withdraw(double amount);
+
+	public double getBalance();
+}
+
+public class Prob2 implements Operation {
+
+	String customerName;
+	String accountNumber;
+	double balance;
+
+	Prob2(String customerName, String accountNumber, double balance) {
+		this.customerName = customerName;
+		this.accountNumber = accountNumber;
+		this.balance = balance;
+	}
+
+	@Override
+	public boolean deposit(double amount) {
+		// TODO Auto-generated method stub
+		if (amount <= 0) {
+			throw new MyException("Deposit amount should not be zero or negative");
+		}
+		balance = amount + balance;
+		return true;
+	}
+
+	@Override
+	public boolean withdraw(double amount) {
+		// TODO Auto-generated method stub
+		if (amount > getBalance()) {
+			throw new MyException("Withdraw amount exceed the balance.");
+		} else {
+			balance = balance - amount;
+		}
+		return true;
+	}
+
+	@Override
+	public double getBalance() {
+		// TODO Auto-generated method stub
+		if (balance <= 100) {
+			throw new MyException("Balance reach below 100$.");
+		}
+		return balance;
+	}
+
+	public static void main(String[] args) {
+		Prob2 ob = new Prob2("Sanjaya", "123456789", 1000);
+		try {
+			System.out.println("Deposit : "+ ob.deposit(100));
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		try {
+			System.out.println("Balance : "+ob.getBalance());
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		try {
+			System.out.println("Withdraw : " + ob.withdraw(12000));
+		} catch (MyException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+
+	}
+}

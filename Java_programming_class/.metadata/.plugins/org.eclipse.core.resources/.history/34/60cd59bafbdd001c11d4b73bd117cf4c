@@ -1,0 +1,24 @@
+package assignment3.recursion;
+
+import java.util.Scanner;
+
+public class RecursionProg2 {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter a String");
+		String st = scanner.next();
+		System.out.println(minCharacter(st));
+	}
+	
+	public static char minCharacter(String st) {
+		char ch = 0;
+		if(st.equals(null) || st.equals("") || st.length() == 1) {
+			System.out.println("Stop");
+			return ch;
+		} else {
+			ch =  st.charAt(1) > st.charAt(0) ? st.charAt(0) : st.charAt(1);
+			minCharacter(st.substring(1, st.length()-1));
+			return ch;
+		}
+	}
+}

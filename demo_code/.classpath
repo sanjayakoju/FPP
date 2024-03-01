@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="lesson8-lists/|lesson7/|lesson13/JdbcPractice/src/|lesson10/EmployeeBST/|Lesson-12-Exceptions/Lesson-12-Exceptions/src/|lesson6-2/" kind="src" path=""/>
+	<classpathentry kind="src" path="Lesson-12-Exceptions/Lesson-12-Exceptions/src"/>
+	<classpathentry kind="src" path="lesson10/EmployeeBST"/>
+	<classpathentry kind="src" path="lesson13/JdbcPractice/src"/>
+	<classpathentry kind="src" path="lesson6-2"/>
+	<classpathentry kind="src" path="lesson7"/>
+	<classpathentry kind="src" path="lesson8-lists"/>
+	<classpathentry kind="output" path="Lesson-12-Exceptions/Lesson-12-Exceptions/bin"/>
+</classpath>

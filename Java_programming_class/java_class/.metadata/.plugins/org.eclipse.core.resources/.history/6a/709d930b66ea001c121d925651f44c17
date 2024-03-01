@@ -1,0 +1,12 @@
+package assignment12;
+
+public class MyException extends RuntimeException {
+	
+	String message;
+	
+	public MyException(String message) {
+		// TODO Auto-generated constructor stub
+		this.message = message;
+	}
+
+}
